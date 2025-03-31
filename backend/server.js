@@ -5,14 +5,8 @@ const cors = require('cors');
 
 const app = express();
 
-// Middleware
-const corsOptions = {
-  origin: 'http://localhost:5174', // Allow requests from frontend origin
-  methods: 'POST,GET,OPTIONS,PUT,DELETE',
-  allowedHeaders: 'Content-Type,Authorization',
-  credentials: true,
-};
-app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json());
 app.use(require('express-fileupload')()); // Enable file upload middleware
 
