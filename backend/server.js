@@ -12,8 +12,6 @@ app.use(require('express-fileupload')()); // Enable file upload middleware
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://2k23cse053:database@d-signature-system.tedit.mongodb.net/?retryWrites=true&w=majority&appName=D-signature-system', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.error('MongoDB Connection Error:', err));
